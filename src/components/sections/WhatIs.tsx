@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { CheckItem } from "@/components/ui/CheckItem";
 import { Container } from "@/components/ui/Container";
-import { Icon } from "@/components/ui/Icon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const highlights = [
@@ -13,11 +13,20 @@ export function WhatIs() {
   return (
     <section className="bg-surface" id="que-es">
       <Container className="flex flex-col items-center gap-12 lg:flex-row lg:gap-12 xl:gap-[90px]">
-        <div className="flex h-[380px] w-full shrink-0 flex-col items-start justify-between rounded-3xl bg-ink p-6 sm:h-[420px] lg:w-[440px] xl:w-[500px]">
-          <div className="flex size-[58px] items-center justify-center rounded-[18px] bg-white/[0.07]">
-            <Icon name="circle-x-dark" size={32} />
-          </div>
-          <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-white/15 bg-white/[0.07] p-5">
+        <div className="relative flex h-[400px] w-full shrink-0 flex-col justify-end overflow-hidden rounded-3xl bg-ink p-6 sm:h-[420px] lg:w-[440px] xl:w-[500px]">
+          <Image
+            src="/images/keys-handover.jpg"
+            alt="Entrega de llaves de un departamento"
+            fill
+            sizes="(max-width: 1024px) 100vw, 500px"
+            className="object-cover object-[50%_35%]"
+          />
+          {/* Degradado para que la tarjeta de texto se lea sobre la foto */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10"
+          />
+          <div className="relative flex w-full flex-col items-start gap-3 rounded-2xl border border-white/15 bg-ink/70 p-5 backdrop-blur-md">
             <p className="text-[11px] font-extrabold leading-[1.21] text-gold">
               TU CONTRATO, RESPALDADO
             </p>

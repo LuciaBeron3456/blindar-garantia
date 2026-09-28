@@ -35,3 +35,7 @@ Abrí <http://localhost:3000>.
 - Datos estructurados JSON-LD en `src/components/JsonLd.tsx`: Organization/FinancialService, WebSite, WebPage, Service y FAQPage (comparte las preguntas de `src/lib/faqs.ts`).
 - Una sola `h1` (hero), `h2` por sección y `h3` para subgrupos; `lang="es-AR"`.
 # blindar-garantia
+
+## Créditos de imágenes
+
+- `public/images/keys-handover.jpg`: foto de Pexels (https://www.pexels.com/photo/7641904/), licencia Pexels (uso comercial libre, sin atribución obligatoria).

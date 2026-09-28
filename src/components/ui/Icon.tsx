@@ -4,7 +4,6 @@ export type IconName =
   | "bolt"
   | "check-circle"
   | "check-circle-white"
-  | "circle-x-dark"
   | "clock"
   | "clock-white"
   | "dot"
