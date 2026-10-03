@@ -71,6 +71,19 @@ export function RequestForm() {
         <Field label="Nombre y apellido" htmlFor="nombre">
           <input id="nombre" name="nombre" required autoComplete="name" placeholder="Ej. Sol Martínez" className={inputClass} />
         </Field>
+        <Field label="DNI" htmlFor="dni">
+          <input
+            id="dni"
+            name="dni"
+            required
+            inputMode="numeric"
+            autoComplete="off"
+            pattern="[0-9.\s]{7,11}"
+            title="Ingresá tu DNI, solo números"
+            placeholder="30.123.456"
+            className={inputClass}
+          />
+        </Field>
         <Field label="Email" htmlFor="email">
           <input id="email" name="email" type="email" required autoComplete="email" placeholder="sol@email.com" className={inputClass} />
         </Field>

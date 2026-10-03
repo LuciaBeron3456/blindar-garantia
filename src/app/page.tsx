@@ -7,7 +7,6 @@ import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { RequestSection } from "@/components/sections/RequestSection";
 import { Requirements } from "@/components/sections/Requirements";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { WhatIs } from "@/components/sections/WhatIs";
 import { WhatsAppFloat } from "@/components/sections/WhatsAppFloat";
 
@@ -22,7 +21,6 @@ export default function Home() {
         <HowItWorks />
         <Requirements />
         <Benefits />
-        <Testimonials />
         <Faq />
         <RequestSection />
       </main>

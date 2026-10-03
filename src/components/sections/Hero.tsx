@@ -45,7 +45,14 @@ export function Hero() {
               </Button>
             </div>
             <p className="text-[13px] leading-[1.21] text-placeholder">
-              ¿Preferís hablar primero? Escribinos sin completar ningún formulario.
+              ¿Preferís hablar primero? Escribinos sin completar ningún{" "}
+              <a
+                href="#solicitud"
+                className="font-semibold text-green underline decoration-gold/70 underline-offset-4 transition-colors hover:decoration-green"
+              >
+                formulario
+              </a>
+              .
             </p>
           </div>
 

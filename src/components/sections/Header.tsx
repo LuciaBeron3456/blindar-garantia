@@ -18,7 +18,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-line bg-white">
-      <Container bare className="flex h-20 items-center justify-between">
+      <Container bare className="flex h-20 items-center justify-between sm:h-24">
         <Logo />
 
         <nav className="hidden items-center gap-[30px] lg:flex" aria-label="Principal">

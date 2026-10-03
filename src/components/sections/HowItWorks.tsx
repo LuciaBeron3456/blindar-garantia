@@ -1,10 +1,23 @@
+import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-const steps = [
+type Step = { n: string; title: ReactNode; text: string; highlight: boolean };
+
+const steps: Step[] = [
   {
     n: "01",
-    title: "Completás el formulario",
+    title: (
+      <>
+        Completás el{" "}
+        <a
+          href="#solicitud"
+          className="text-green underline decoration-gold/70 underline-offset-4 transition-colors hover:decoration-green"
+        >
+          formulario
+        </a>
+      </>
+    ),
     text: "Contanos quién sos, cuánto pagarías de alquiler y cómo podemos contactarte.",
     highlight: false,
   },

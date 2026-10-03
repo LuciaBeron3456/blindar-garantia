@@ -16,7 +16,19 @@ export function RequestSection() {
             tone="dark"
             eyebrow="Empezá hoy"
             title="Tu próximo hogar puede estar más cerca"
-            description="¿No querés completar el formulario? Sin problema. Escribinos por WhatsApp y te orientamos al instante, sin papeles ni esperas."
+            description={
+              <>
+                ¿No querés completar el{" "}
+                <a
+                  href="#solicitud"
+                  className="text-gold underline decoration-gold/60 underline-offset-4 transition-colors hover:text-white"
+                >
+                  formulario
+                </a>
+                ? Sin problema. Escribinos por WhatsApp y te orientamos al instante, sin papeles ni
+                esperas.
+              </>
+            }
           />
 
           <div className="flex items-center gap-2 rounded-xl bg-wa/15 px-[14px] py-[10px]">

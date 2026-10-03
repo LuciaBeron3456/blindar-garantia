@@ -14,10 +14,10 @@ Abrí <http://localhost:3000>.
 ## Estructura
 
 - `src/app/page.tsx` compone las secciones en orden.
-- `src/components/sections/` una carpeta por sección (Header, Hero, WhatIs, HowItWorks, Requirements, Benefits, Testimonials, Faq, RequestSection, Footer, WhatsAppFloat).
+- `src/components/sections/` una carpeta por sección (Header, Hero, WhatIs, HowItWorks, Requirements, Benefits, Faq, RequestSection, Footer, WhatsAppFloat). La sección de testimonios se quitó a pedido del cliente; se apoyan en las reseñas de Google.
 - `src/components/ui/` piezas reutilizables (Button, SectionHeading, CheckItem, Icon, Logo, WhatsAppIcon, Container).
 - `src/lib/site.ts` datos de contacto, número de WhatsApp y navegación.
-- `src/app/api/solicitud/route.ts` recibe el formulario (por ahora valida y loguea; conectar a CRM/email).
+- `src/app/api/solicitud/route.ts` recibe el formulario (nombre, DNI, email, teléfono, monto, mensaje). Por ahora valida y loguea; conectar a CRM/email.
 - `src/app/globals.css` tokens de color, sombras y tipografía del diseño.
 - `public/icons` y `public/images` assets exportados desde Figma.
 

@@ -19,7 +19,7 @@ export function Logo({ tone = "light" }: Props) {
         height={717}
         priority={!dark}
         loading="eager"
-        className="h-12 w-auto"
+        className="h-12 w-auto sm:h-16"
       />
       <Image
         src={`/images/logo-wordmark-${v}.png`}
@@ -28,7 +28,7 @@ export function Logo({ tone = "light" }: Props) {
         height={282}
         priority={!dark}
         loading="eager"
-        className="h-[34px] w-auto"
+        className="h-[38px] w-auto sm:h-[52px]"
       />
     </a>
   );
