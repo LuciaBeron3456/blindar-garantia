@@ -8,7 +8,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { RequestSection } from "@/components/sections/RequestSection";
 import { Requirements } from "@/components/sections/Requirements";
 import { WhatIs } from "@/components/sections/WhatIs";
-import { WhatsAppFloat } from "@/components/sections/WhatsAppFloat";
+import { FloatingButtons } from "@/components/sections/FloatingButtons";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
         <RequestSection />
       </main>
       <Footer />
-      <WhatsAppFloat />
+      <FloatingButtons />
     </>
   );
 }
