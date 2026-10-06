@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
-import { site } from "@/lib/site";
+import { mapsLink, site } from "@/lib/site";
 
 const footerNav = [
   { label: "Cómo funciona", href: "#como-funciona" },
@@ -40,11 +40,12 @@ export function Footer() {
             <a href={`tel:+${site.whatsappNumber}`} className={linkClass}>
               {site.phoneDisplay}
             </a>
-            <p className="text-[14px] leading-[1.21] text-white">
-              <a href={site.instagram} className="hover:text-gold">Instagram</a>
-              <span className="mx-2">·</span>
-              <a href={site.linkedin} className="hover:text-gold">LinkedIn</a>
-            </p>
+            <a href={mapsLink} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              {site.address.display}
+            </a>
+            <a href={site.instagram} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              Instagram {site.instagramHandle}
+            </a>
           </div>
         </div>
 

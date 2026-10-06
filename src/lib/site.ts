@@ -19,15 +19,24 @@ export const site = {
     "Blindar",
   ],
   locale: "es_AR",
-  address: { country: "AR", region: "Buenos Aires", locality: "Ciudad Autónoma de Buenos Aires" },
-  whatsappNumber: "5491155550189",
-  phoneDisplay: "+54 9 11 5555 0189",
-  email: "hola@blindar.com.ar",
+  address: {
+    street: "Gral. Ramón Freire 1400",
+    locality: "Ciudad Autónoma de Buenos Aires",
+    region: "Buenos Aires",
+    country: "AR",
+    display: "Gral. Ramón Freire 1400, Buenos Aires",
+  },
+  whatsappNumber: "5491164494538",
+  phoneDisplay: "+54 9 11 6449 4538",
+  email: "blindargarantia@gmail.com",
   hours: "Lun a vie, 9 a 18 hs",
-  // TODO: reemplazar por las URLs reales de redes
-  instagram: "#",
-  linkedin: "#",
+  instagramHandle: "@blindargarantia",
+  instagram: "https://www.instagram.com/blindargarantia/",
 };
+
+export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${site.address.street}, ${site.address.locality}, Argentina`,
+)}`;
 
 export function waLink(message?: string) {
   const base = `https://wa.me/${site.whatsappNumber}`;

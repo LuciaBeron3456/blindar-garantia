@@ -25,7 +25,7 @@ Abrí <http://localhost:3000>.
 
 - El logo oficial (candado + wordmark) está recortado en piezas con fondo transparente: `logo-icon-*.png` y `logo-wordmark-*.png` (`light` para fondos claros, `dark` para oscuros). También hay `logo-light.png` / `logo-dark.png` completos y el favicon en `src/app/icon.png`.
 - Los botones de WhatsApp usan el logo oficial de WhatsApp en lugar del ícono "circle-x" que traía el diseño.
-- Los links de Instagram / LinkedIn y las páginas de Privacidad / Términos están como `#` hasta tener las URLs reales.
+- Datos de contacto reales (WhatsApp, email, dirección, Instagram) en `src/lib/site.ts`. Las páginas de Privacidad / Términos siguen como `#` hasta tener contenido.
 
 ## SEO
 

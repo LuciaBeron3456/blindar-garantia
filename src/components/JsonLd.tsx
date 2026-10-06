@@ -20,10 +20,12 @@ export function JsonLd() {
     areaServed: { "@type": "Country", name: "Argentina" },
     address: {
       "@type": "PostalAddress",
-      addressCountry: site.address.country,
-      addressRegion: site.address.region,
+      streetAddress: site.address.street,
       addressLocality: site.address.locality,
+      addressRegion: site.address.region,
+      addressCountry: site.address.country,
     },
+    sameAs: [site.instagram],
     contactPoint: [
       {
         "@type": "ContactPoint",
