@@ -26,10 +26,21 @@ export function mailConfigSummary() {
     gmailUser: user ? maskEmail(user) : "(vacío)",
     appPasswordLength: pass.length, // Gmail genera 16 caracteres
     appPasswordLooksValid: pass.length === 16,
-    mailTo: process.env.MAIL_TO ? maskEmail(process.env.MAIL_TO) : "(= GMAIL_USER)",
+    mailTo: process.env.MAIL_TO ? maskEmail(process.env.MAIL_TO) : "(= GMAIL_USER con alias +web)",
     nodeEnv: process.env.NODE_ENV,
     vercelEnv: process.env.VERCEL_ENV ?? "(no vercel)",
   };
+}
+
+/**
+ * Si el mail sale de la misma casilla a la que va, Gmail lo guarda solo en
+ * "Enviados" y no aparece en Recibidos. Usar un alias "+web" (misma casilla,
+ * distinto destinatario) hace que caiga en Recibidos.
+ */
+function inboxAlias(user: string) {
+  const [local, domain] = user.split("@");
+  if (!domain || local.includes("+")) return user;
+  return `${local}+web@${domain}`;
 }
 
 function maskEmail(e: string) {
@@ -50,7 +61,7 @@ export async function sendSolicitud(data: Solicitud, reqId = "-") {
   const tag = `[solicitud ${reqId}]`;
   const user = process.env.GMAIL_USER!;
   const pass = process.env.GMAIL_APP_PASSWORD!.replace(/\s/g, "");
-  const to = process.env.MAIL_TO || user;
+  const to = process.env.MAIL_TO || inboxAlias(user);
 
   console.log(`${tag} mail: creando transporte smtp.gmail.com:465`, {
     from: maskEmail(user),
