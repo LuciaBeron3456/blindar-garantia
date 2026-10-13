@@ -18,6 +18,14 @@ export function RequestForm() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    const started = Date.now();
+
+    console.info("[solicitud] enviando formulario", {
+      campos: Object.keys(data),
+      vacios: Object.entries(data)
+        .filter(([, v]) => !String(v).trim())
+        .map(([k]) => k),
+    });
 
     setStatus("loading");
     setError(null);
@@ -27,11 +35,23 @@ export function RequestForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      const json = (await res.json()) as { ok: boolean; error?: string };
+      const json = (await res.json().catch(() => ({ ok: false }))) as {
+        ok: boolean;
+        error?: string;
+        reqId?: string;
+      };
+      console.info("[solicitud] respuesta del servidor", {
+        status: res.status,
+        ok: json.ok,
+        reqId: json.reqId,
+        error: json.error,
+        ms: Date.now() - started,
+      });
       if (!res.ok || !json.ok) throw new Error(json.error ?? "No pudimos enviar tu solicitud.");
       setStatus("success");
       form.reset();
     } catch (err) {
+      console.error("[solicitud] falló el envío", err);
       setStatus("error");
       setError(err instanceof Error ? err.message : "No pudimos enviar tu solicitud.");
     }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8" />
+<title>Cómo conectar el formulario de la web con tu Gmail</title>
+<style>
+  @page { size: A4; margin: 20mm 22mm; }
+  body { font-family: Arial, Helvetica, sans-serif; color: #111; margin: 0; font-size: 11.5pt; line-height: 1.5; }
+  h1 { font-size: 20pt; font-weight: 700; line-height: 1.2; margin: 0 0 14px; }
+  h2 { font-size: 14pt; font-weight: 700; margin: 18px 0 6px; break-after: avoid; }
+  p { margin: 0 0 10px; }
+  ol { margin: 0 0 12px; padding-left: 22px; }
+  ol li { margin-bottom: 9px; }
+  ol li strong.t { display: block; margin-bottom: 2px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  ul li { margin-bottom: 4px; }
+  a { color: #111; font-weight: 700; text-decoration: underline; word-break: break-all; }
+  .code { font-family: Consolas, Menlo, monospace; letter-spacing: .08em; }
+</style>
+</head>
+<body>
+  <h1>Cómo conectar el formulario de la web con tu Gmail</h1>
+
+  <p>
+    Cuando alguien completa el formulario de la web, llega un mail a <strong>blindargarantia@gmail.com</strong>.
+    Para que Google permita ese envío, necesito que generes una <strong>contraseña de aplicación</strong>.
+    Lleva unos 5 minutos y se hace una sola vez.
+  </p>
+
+  <p>
+    Una contraseña de aplicación es un código de 16 letras que Google crea para que la web pueda enviar mails
+    desde tu cuenta <strong>sin conocer tu contraseña real</strong>. Podés borrarlo cuando quieras y eso no afecta
+    tu contraseña ni tu acceso al mail.
+  </p>
+
+  <h2>Pasos</h2>
+  <ol>
+    <li>
+      <strong class="t">Entrá a tu cuenta de Google</strong>
+      Desde una computadora, abrí <a href="https://myaccount.google.com/security">myaccount.google.com/security</a>
+      e iniciá sesión con blindargarantia@gmail.com.
+    </li>
+    <li>
+      <strong class="t">Activá la "Verificación en 2 pasos"</strong>
+      En esa pantalla buscá <em>Verificación en 2 pasos</em> y seguí las indicaciones (Google te pide tu número de
+      celular). Si ya la tenés activada, pasá al siguiente paso. Sin esto Google no deja crear la contraseña de aplicación.
+    </li>
+    <li>
+      <strong class="t">Creá la contraseña de aplicación</strong>
+      Abrí <a href="https://myaccount.google.com/apppasswords">myaccount.google.com/apppasswords</a>.
+      En <em>Nombre de la app</em> escribí <strong>Blindar Web</strong> y tocá <strong>Crear</strong>.
+    </li>
+    <li>
+      <strong class="t">Copiá el código que aparece</strong>
+      Es un código de 16 letras en 4 bloques, parecido a <span class="code">abcd efgh ijkl mnop</span>.
+      Copialo tal cual. Se muestra una sola vez; si lo perdés, se crea uno nuevo.
+    </li>
+    <li>
+      <strong class="t">Pasámelo por mensaje privado</strong>
+      Con ese código configuro la web y las solicitudes empiezan a llegarte al Gmail.
+    </li>
+  </ol>
+
+  <h2>Importante</h2>
+  <ul>
+    <li><strong>No me pases tu contraseña de Gmail.</strong> Solo necesito el código de 16 letras del paso 4.</li>
+    <li>Para cortar el acceso en cualquier momento, entrá a myaccount.google.com/apppasswords y borrá "Blindar Web".</li>
+    <li>Los mails llegan con el remitente "Blindar Web". Al responderlos, la respuesta le llega a la persona que completó el formulario.</li>
+    <li>Revisá la carpeta de Spam los primeros días.</li>
+  </ul>
+
+  <p>
+    <strong>Qué datos llegan en cada solicitud:</strong> nombre y apellido, DNI, email, teléfono, monto de alquiler
+    estimado y el mensaje que escribió la persona.
+  </p>
+</body>
+</html>
