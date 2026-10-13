@@ -1,13 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({
+/**
+ * Inter alojada en el repo (variable, 400–800) para que el build no dependa
+ * de descargar la fuente de Google Fonts.
+ */
+const inter = localFont({
   variable: "--font-inter",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "600", "700", "800"],
   display: "swap",
+  // El subset "latin" cubre todo el español (acentos, ñ, ¿ ¡).
+  src: [{ path: "./fonts/inter-latin.woff2", weight: "400 800", style: "normal" }],
 });
 
 export const metadata: Metadata = {
